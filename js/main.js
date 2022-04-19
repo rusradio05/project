@@ -1,78 +1,41 @@
 "use strict";
-
-// // const hamb = 3,
-// //   fries = 5,
-// //   cola = 0;
-
-// // console.log(hamb >= 2 && cola && fries);
-
-// // if (hamb >= 3 && cola && fries) {
-// //   console.log("Enter");
-// // } else {
-// //   console.log("Exit");
-// // }
-// // const a = undefined;
-
-// console.log(1 && 0);
-// console.log(1 && 5);
-// console.log(null && 5);
-// console.log(" " && "dagfhj");
-
-// const hamb = 3,
-//   fries = 1,
-//   cola = 0;
-
-// console.log(cola || fries || hamb);
-
-// if (hamb || cola || fries) {
-//   console.log("Enter");
-// } else {
-//   console.log("Exit");
+// //
+// let arr = [];
+// for (let i = 0; i <= 5; i++) {
+//   arr[i] = i + 5;
 // }
+// console.log(arr);
 
-// let johnRep,
-//   maxRep,
-//   andyRep = "s",
-//   annRep = "done";
-// console.log(johnRep || maxRep || andyRep || annRep);
-
-// const hamb = 3,
-//   fries = 3,
-//   cola = 1,
-//   nuggets = 1;
-
-// if ((hamb === 3 && cola == 2) || (fries === 3 && nuggets)) {
-//   console.log("Enter");
-// } else {
-//   console.log("Exit");
+// const arr = [3, 5, 8, 16, 20, 23, 50];
+// const result = [];
+// for (let i = 0; i < arr.length; i++) {
+//   result[i] = arr[i];
 // }
-// console.log(hamb === 3 && cola == 2);
-// console.log(fries === 3 && nuggets);
-// console.log(hamb === 3 && (cola == 2 || fries === 3) && nuggets);
+// console.log(result);
 
-// console.log(!!1);
+// let data = [5, 10, "Shopping", 20, "Homework"];
+// for (let i = 0; i < data.length; i++) {
+//   if (typeof data[i] == "number") {
+//     data[i] *= 2;
+//   } else if (typeof data[i] == "string") {
+//     data[i] = data[i] + " - done";
+//   }
+// }
+// console.log(data);
 
-// console.log(NaN || 2 || undefined);
+// const data = [5, 10, "Shopping", 20, "Homework"];
+// const result = [];
+// for (let i = data.length; i > 0; i--) {
+//   result[data.length - i] = data[i - 1];
+// }
+// console.log(result);
+const length = 7;
+let result = "";
+for (let i = 1; i < length; i++) {
+  for (let j = 0; j < i; j++) {
+    result += "*";
+  }
 
-// console.log(NaN && 2 && undefined);
-
-// console.log(1 && 2 && 3);
-
-// console.log((!1 && 2) || !3);
-
-// console.log(25 || (null && !3));
-
-// console.log(NaN || null || !3 || undefined || 5);
-
-// console.log(!5 && undefined && null && !3); // 5
-
-// console.log((5 === 5 && 3 > 1) || 5); // true
-
-const hamburger = 3;
-const fries = 3;
-const cola = 0;
-const nuggets = 2;
-
-if ((hamburger === 3 && cola) || (fries === 3 && nuggets)) {
-  console.log("Done!");
+  result += "\n";
 }
+console.log(result);
