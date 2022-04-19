@@ -29,9 +29,13 @@
 //   result[data.length - i] = data[i - 1];
 // }
 // console.log(result);
-const length = 7;
+
+const length = 13;
 let result = "";
-for (let i = 1; i < length; i++) {
+for (let i = 1; i < length; i = i + 2) {
+  for (let k = (length - 2 - i) / 2; k; k--) {
+    result += " ";
+  }
   for (let j = 0; j < i; j++) {
     result += "*";
   }
