@@ -30,10 +30,24 @@
 // }
 // console.log(result);
 
-const length = 13;
+// const length = 13;
+// let result = "";
+// for (let i = 1; i < length; i = i + 2) {
+//   for (let k = (length - 2 - i) / 2; k > 0; k--) {
+//     result += " ";
+//   }
+//   for (let j = 0; j < i; j++) {
+//     result += "*";
+//   }
+
+//   result += "\n";
+// }
+// console.log(result);
+
+const lines = 5;
 let result = "";
-for (let i = 1; i < length; i = i + 2) {
-  for (let k = (length - 2 - i) / 2; k; k--) {
+for (let i = 1; i <= 11; i = i + 2) {
+  for (let k = lines - (i - 1) / 2; k > 0; k--) {
     result += " ";
   }
   for (let j = 0; j < i; j++) {

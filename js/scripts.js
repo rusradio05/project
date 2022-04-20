@@ -14,9 +14,7 @@
 
 "use strict";
 
-// Код возьмите из предыдущего домашнего задания
-
-const numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?", "");
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -26,33 +24,12 @@ const personalMovieDB = {
   privat: false,
 };
 
-let a, b;
+const a = prompt("Один из последних просмотренных фильмов?", ""),
+  b = prompt("На сколько оцените его?", ""),
+  c = prompt("Один из последних просмотренных фильмов?", ""),
+  d = prompt("На сколько оцените его?", "");
 
-for (let i = 1; i < 3; i++) {
-  (a = prompt(`"Один из последних просмотренных фильмов?" - ${i}`, "")),
-    (b = prompt(`"На сколько оцените его?" - ${i}`, ""));
-  if (
-    a != "" &&
-    a != null &&
-    a.length <= 50 &&
-    b != "" &&
-    b != null &&
-    b.length <= 50
-  ) {
-    personalMovieDB.movies[a] = b;
-    console.log("Done!");
-  } else {
-    console.log("Error!!!");
-    i--;
-  }
-}
-if (personalMovieDB.count < 10) {
-  console.log("Просмотрено довольно мало фильмов");
-} else if (10 >= personalMovieDB.count <= 30) {
-  console.log("Вы классический зритель");
-} else if (personalMovieDB > 30) {
-  console.log("Вы киноман");
-} else {
-  console.log("Произошла ошибка");
-}
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
 console.log(personalMovieDB);
