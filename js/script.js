@@ -81,21 +81,26 @@ function test() {
 test();
 
 function sayHello(userName) {
-  return "Привет, " + userName + "!";
+  // return "Привет, " + userName + "!";
+  return `Привет, ${userName}!`;
 }
 console.log(sayHello("Gena"));
 
 function returnNeighboringNumbers(num) {
-  let mass = [];
-  mass[0] = num - 1;
-  mass[1] = num;
-  mass[2] = num + 1;
-  return mass;
+  return [num - 1, num, num + 1];
+  // let mass = [];
+  // mass[0] = num - 1;
+  // mass[1] = num;
+  // mass[2] = num + 1;
+  // return mass;
 }
-console.log(returnNeighboringNumbers(5));
+console.log(returnNeighboringNumbers(10));
 
 function getMathResult(num, count) {
   let str = "";
+  if (typeof count === "string" || count <= 0) {
+    str = num;
+  }
   for (let i = 1; i <= count; i++) {
     if (i < count) {
       str += num * i + "---";
@@ -105,4 +110,20 @@ function getMathResult(num, count) {
   }
   return str;
 }
-console.log(getMathResult(10, 5));
+console.log(getMathResult(2, 5));
+
+function getMathResult(num, count) {
+  if (typeof count !== "number" || count <= 0) {
+    return num;
+  }
+  let str = "";
+  for (let i = 1; i <= count; i++) {
+    if (i == count) {
+      str += `${num * i}`;
+    } else {
+      str += `${i * num}---`;
+    }
+  }
+  return str;
+}
+console.log(getMathResult(5, 10));
