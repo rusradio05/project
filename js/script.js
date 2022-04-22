@@ -127,3 +127,31 @@ function getMathResult(num, count) {
   return str;
 }
 console.log(getMathResult(5, 10));
+
+let str = "someText";
+console.log(str.toUpperCase());
+let STR = str.toUpperCase();
+console.log(str.toLowerCase());
+console.log(str);
+console.log(STR);
+
+const arr = [1, 2, 3, 4, 5, 56];
+console.log(str[3]);
+console.log(arr.length);
+
+const fruit = "Some fruit from supermarket";
+console.log(typeof fruit.indexOf("froms"));
+
+const logg = "What's a good day today!";
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(5, 6));
+
+console.log(logg);
+
+const num = 12.49;
+console.log(Math.round(num));
+
+const num = "12.49px";
+console.log(parseInt(num));
+console.log(parseFloat(num));
