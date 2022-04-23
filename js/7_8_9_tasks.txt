@@ -1,0 +1,60 @@
+// program to check if a number is a float or integer value
+
+// function checkNumber(x) {
+//   // check if the passed value is a number
+//   if (typeof x == "number" && !isNaN(x)) {
+//     // check if it is integer
+//     if (Number.isInteger(x)) {
+//       console.log(`${x} is integer.`);
+//     } else {
+//       console.log(`${x} is a float value.`);
+//     }
+//   } else {
+//     console.log(`${x} is not a number`);
+//   }
+// }
+
+// checkNumber("hello");
+// checkNumber(44);
+// checkNumber(3.4);
+// checkNumber(-3.4);
+// checkNumber(NaN);
+
+// Решение задачи 7.1
+
+function calculateVolumeAndArea(a) {
+  if (Number.isInteger(a) && !isNaN(a) && typeof a !== "string" && a > 0) {
+    console.log(
+      `=> 'Объем куба: ${a * a * a}, площадь всей поверхности: ${6 * a * a}'`
+    );
+  } else {
+    console.log(`=> 'При вычислении произошла ошибка'`);
+  }
+}
+calculateVolumeAndArea('15');
+
+// Решение задачи 7.2
+
+function getCoupeNumber(a) {
+  if (Number.isInteger(a) && !isNaN(a) && a >= 0) {
+    if (a > 36 || a == 0) {
+      console.log("Таких мест в вагоне не существует");
+    } else if (a % 4 > 0) {
+      console.log(parseInt(a / 4) + 1);
+    } else if (a % 4 == 0) {
+      console.log(a / 4);
+    }
+  }
+  else {console.log("Ошибка. Проверьте правильность введенного номера места");}
+}
+  getCoupeNumber("a");
+
+  // for (Number.isInteger(a) && !isNaN(a) && a > 0) {
+
+  //     console.log("Таких мест в вагоне не существует");
+  //   }
+  // }
+  // } else {
+  //   console.log("Ошибка. Проверьте правильность введенного номера места");
+  // }
+}
